@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f3ed" />
+    <meta name="description" content="Explore o catálogo de demonstração da Bê Store: brincos, colares e anéis com o brilho que combina com você." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="catalogo.css" />
+    <title>Catálogo | Bê Store</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="announcement">Seu brilho, do seu jeito <span aria-hidden="true">✦</span> Bê Store</div>
+
+    <header class="site-header" id="topo">
+      <div class="header-inner container">
+        <a class="brand" href="index.html" aria-label="Bê Store, voltar à página inicial">
+          <span class="brand-crop"><img src="assets/be-store-logo.png" alt="" width="1050" height="1037" /></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a href="catalogo.html">Coleção</a>
+          <a href="index.html#essencia">Nossa essência</a>
+          <a href="index.html#contato">Contato</a>
+        </nav>
+        <a class="header-instagram" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Bê Store (abre em outra aba)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Siga a Bê</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span></button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação para celular" hidden>
+        <a href="catalogo.html">Coleção</a>
+        <a href="index.html#essencia">Nossa essência</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="catalog-hero" aria-labelledby="catalog-title">
+        <div class="container catalog-hero-grid">
+          <div class="catalog-hero-copy">
+            <nav class="breadcrumbs" aria-label="Caminho de navegação"><a href="index.html">Início</a><span aria-hidden="true">/</span><a href="catalogo.html">Coleção</a><span aria-hidden="true">/</span><span id="breadcrumb-current">Todas as peças</span></nav>
+            <p class="section-overline">CURADORIA BÊ STORE</p>
+            <h1 id="catalog-title">Todas as <em>peças.</em></h1>
+            <p id="catalog-description">Uma seleção para descobrir detalhes que combinam com o seu jeito de brilhar.</p>
+            <div class="catalog-hero-count"><span id="hero-count">10</span> peças para explorar <span aria-hidden="true">✧</span></div>
+          </div>
+          <div class="catalog-hero-visual"><img id="catalog-hero-image" src="assets/hero-joias.webp" alt="Semijoias douradas em composição editorial" width="1536" height="1024" /></div>
+        </div>
+      </section>
+
+      <section class="catalog-content" aria-label="Produtos do catálogo">
+        <div class="container">
+          <div class="demo-banner"><span aria-hidden="true">✳</span><p><strong>Catálogo de demonstração.</strong> Produtos, fotos e preços são fictícios para visualizar o site. Consulte o Instagram para conhecer as peças disponíveis.</p></div>
+          <nav class="category-tabs" aria-label="Categorias de produtos">
+            <a href="catalogo.html" data-category-link="todos">Todas as peças</a>
+            <a href="catalogo.html?categoria=brincos" data-category-link="brincos">Brincos</a>
+            <a href="catalogo.html?categoria=colares" data-category-link="colares">Colares</a>
+            <a href="catalogo.html?categoria=aneis" data-category-link="aneis">Anéis</a>
+          </nav>
+          <div class="catalog-toolbar">
+            <p id="product-count" aria-live="polite">10 produtos</p>
+            <label for="sort-products">Ordenar por <select id="sort-products"><option value="featured">Destaques</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome A–Z</option></select></label>
+          </div>
+          <div class="product-grid" id="product-grid"></div>
+          <div class="catalog-end"><span aria-hidden="true">✧</span><p>Feito para inspirar. Confira as peças reais da Bê Store no Instagram.</p><a class="underlined-link" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Visitar Instagram <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Fechar detalhes do produto">×</button>
+      <div class="dialog-grid">
+        <div class="dialog-image-wrap"><img id="dialog-image" alt="" /></div>
+        <div class="dialog-content">
+          <p class="section-overline" id="dialog-category"></p>
+          <h2 id="dialog-title"></h2>
+          <p id="dialog-description"></p>
+          <p class="dialog-price" id="dialog-price"></p>
+          <p class="dialog-disclaimer">Produto e preço ilustrativos. Esta peça não está à venda neste catálogo de demonstração.</p>
+          <a class="button button-dark" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Conhecer peças reais <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="footer">
+      <div class="container footer-main">
+        <div><a class="footer-wordmark" href="index.html">BÊ STORE<span aria-hidden="true">✳</span></a><p>Semijoias para acompanhar sua essência.</p></div>
+        <div class="footer-links"><span>EXPLORE</span><a href="catalogo.html">Coleção</a><a href="index.html#essencia">Nossa essência</a><a href="index.html#contato">Contato</a></div>
+        <div class="footer-links"><span>ACOMPANHE</span><a href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      </div>
+      <div class="container footer-bottom"><span>© <span id="year">2026</span> Bê Store. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo ↑</a></div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="catalogo.js" defer></script>
+  </body>
+</html>
