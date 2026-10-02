@@ -42,6 +42,10 @@
 .product-name { display: block; margin-top: 6px; font-family: "Playfair Display", Georgia, serif; font-size: clamp(20px, 1.65vw, 27px); line-height: 1.3; letter-spacing: -.035em; }
 .product-price { display: block; margin-top: 8px; font-size: 13px; font-weight: 700; }
 .product-price small { color: #8a8074; font-size: 10px; font-weight: 400; margin-left: 5px; }
+.product-add { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; margin-top: 15px; padding: 12px 0; border: 0; border-top: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; font: 700 10px "DM Sans", Arial, sans-serif; letter-spacing: .11em; text-align: left; text-transform: uppercase; transition: color 180ms ease, transform 160ms var(--ease-out); }
+.product-add span { font-size: 18px; font-weight: 400; line-height: 1; }
+.product-add:hover { color: var(--gold); }
+.product-add:active { transform: scale(.98); }
 .catalog-end { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 95px; }
 .catalog-end > span { color: var(--gold); font-family: Georgia, serif; font-size: 43px; line-height: 1; }
 .catalog-end p { margin: 14px 0 20px; color: var(--muted); font-size: 13px; }
@@ -59,6 +63,12 @@
 .dialog-content .dialog-price { color: var(--ink) !important; font-size: 22px !important; font-weight: 700; }
 .dialog-content .dialog-disclaimer { font-size: 11px !important; }
 .dialog-content .button { margin-top: 7px; }
+.dialog-real-link { margin-top: 20px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.dialog-real-link:hover { color: var(--ink); }
+.cart-toast { position: fixed; z-index: 40; right: 24px; bottom: 24px; display: flex; align-items: center; gap: 23px; padding: 17px 20px; background: #25211e; color: white; box-shadow: 0 14px 40px rgba(25,21,17,.22); font-size: 12px; }
+.cart-toast[hidden] { display: none; }
+.cart-toast a { color: #d5ad79; font-weight: 700; white-space: nowrap; }
+.cart-toast a:hover { color: white; }
 .dialog-close { position: absolute; z-index: 1; top: 13px; right: 13px; display: grid; place-items: center; width: 37px; height: 37px; border: 0; border-radius: 50%; background: var(--ivory); color: var(--ink); cursor: pointer; font-size: 28px; line-height: 1; transition: transform 160ms var(--ease-out), background-color 180ms ease; }
 .dialog-close:hover { background: #e9decf; }
 .dialog-close:active { transform: scale(.97); }
@@ -101,6 +111,7 @@
   .product-name { font-size: 21px; }
   .product-price { font-size: 12px; }
   .product-price small { display: block; margin: 2px 0 0; }
+  .product-add { margin-top: 10px; font-size: 9px; }
   .catalog-end { padding-top: 70px; }
   .product-dialog { width: min(450px, calc(100vw - 22px)); max-height: 92svh; }
   .dialog-grid { display: block; }
@@ -108,6 +119,7 @@
   .dialog-content { padding: 25px 23px 30px; }
   .dialog-content h2 { font-size: 38px; }
   .dialog-content > p:not(.section-overline) { margin-bottom: 10px; }
+  .cart-toast { left: 12px; right: 12px; bottom: 12px; justify-content: space-between; gap: 10px; font-size: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

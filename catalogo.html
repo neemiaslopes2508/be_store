@@ -27,11 +27,14 @@
           <a href="index.html#essencia">Nossa essência</a>
           <a href="index.html#contato">Contato</a>
         </nav>
-        <a class="header-instagram" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Bê Store (abre em outra aba)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
-          <span>Siga a Bê</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span></button>
+        <div class="header-actions">
+          <a class="header-instagram" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Bê Store (abre em outra aba)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Siga a Bê</span>
+          </a>
+          <a class="header-cart" href="carrinho.html" data-cart-link aria-label="Carrinho, 0 itens"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 8h15l-1.2 12h-12L4.5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-badge" data-cart-count hidden>0</span></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span></button>
+        </div>
       </div>
       <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação para celular" hidden>
         <a href="catalogo.html">Coleção</a>
@@ -83,8 +86,9 @@
           <h2 id="dialog-title"></h2>
           <p id="dialog-description"></p>
           <p class="dialog-price" id="dialog-price"></p>
-          <p class="dialog-disclaimer">Produto e preço ilustrativos. Esta peça não está à venda neste catálogo de demonstração.</p>
-          <a class="button button-dark" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Conhecer peças reais <span aria-hidden="true">↗</span></a>
+          <p class="dialog-disclaimer">Produto e preço ilustrativos. A compra será apenas uma simulação.</p>
+          <button class="button button-dark" type="button" id="dialog-add">Adicionar ao carrinho <span aria-hidden="true">＋</span></button>
+          <a class="dialog-real-link" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Ver peças reais no Instagram ↗</a>
         </div>
       </div>
     </dialog>
@@ -98,6 +102,9 @@
       <div class="container footer-bottom"><span>© <span id="year">2026</span> Bê Store. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo ↑</a></div>
     </footer>
 
+    <div class="cart-toast" id="cart-toast" role="status" aria-live="polite" hidden><span id="cart-toast-message"></span><a href="carrinho.html">Ver carrinho ↗</a></div>
+    <script src="products.js" defer></script>
+    <script src="store.js" defer></script>
     <script src="script.js" defer></script>
     <script src="catalogo.js" defer></script>
   </body>

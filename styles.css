@@ -37,6 +37,13 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .header-instagram { display: inline-flex; justify-self: end; align-items: center; gap: 10px; transition: color 180ms ease; }
 .header-instagram:hover { color: var(--gold); }
 .header-instagram svg { width: 19px; height: 19px; }
+.header-actions { display: flex; justify-self: end; align-items: center; gap: 23px; }
+.header-cart { position: relative; display: grid; place-items: center; width: 31px; height: 38px; transition: color 180ms ease, transform 160ms var(--ease-out); }
+.header-cart:hover { color: var(--gold); }
+.header-cart:active { transform: scale(.97); }
+.header-cart svg { width: 22px; height: 22px; }
+.cart-badge { position: absolute; top: 0; right: -7px; display: grid; place-items: center; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 50%; background: var(--gold); color: white; font-size: 10px; font-weight: 700; }
+.cart-badge[hidden] { display: none; }
 .menu-toggle, .mobile-nav { display: none; }
 
 .hero { position: relative; min-height: min(690px, 74vw); min-height: clamp(580px, 56vw, 760px); overflow: hidden; display: flex; align-items: center; background: #e9d8c1; }
@@ -141,6 +148,8 @@ h1 em, h2 em { font-weight: 400; }
   .brand { width: 143px; height: 63px; }
   .brand-crop { transform: scale(.82); transform-origin: top left; }
   .desktop-nav, .header-instagram { display: none; }
+  .header-actions { gap: 9px; }
+  .header-cart { width: 40px; height: 44px; }
   .menu-toggle { display: flex; width: 44px; height: 44px; border: 0; background: transparent; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; transition: transform 160ms var(--ease-out); }
   .menu-toggle span { width: 23px; height: 1.5px; background: var(--ink); transition: transform 180ms var(--ease-out); }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.75px) rotate(45deg); }

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f3ed" />
+    <meta name="description" content="Checkout de demonstração da Bê Store. Nenhuma compra ou cobrança real será realizada." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <title>Checkout de demonstração | Bê Store</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="announcement">Seu brilho, do seu jeito <span aria-hidden="true">✦</span> Bê Store</div>
+    <header class="site-header" id="topo">
+      <div class="header-inner container">
+        <a class="brand" href="index.html" aria-label="Bê Store, voltar à página inicial"><span class="brand-crop"><img src="assets/be-store-logo.png" alt="" width="1050" height="1037" /></span></a>
+        <nav class="desktop-nav" aria-label="Navegação principal"><a href="catalogo.html">Coleção</a><a href="index.html#essencia">Nossa essência</a><a href="index.html#contato">Contato</a></nav>
+        <div class="header-actions">
+          <a class="header-instagram" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Bê Store (abre em outra aba)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg><span>Siga a Bê</span></a>
+          <a class="header-cart" href="carrinho.html" data-cart-link aria-label="Carrinho, 0 itens"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 8h15l-1.2 12h-12L4.5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-badge" data-cart-count hidden>0</span></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação para celular" hidden><a href="catalogo.html">Coleção</a><a href="index.html#essencia">Nossa essência</a><a href="index.html#contato">Contato</a><a href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav>
+    </header>
+
+    <main class="shop-page checkout-page" id="conteudo">
+      <div class="container">
+        <nav class="shop-breadcrumbs" aria-label="Caminho de navegação"><a href="index.html">Início</a><span aria-hidden="true">/</span><a href="carrinho.html">Carrinho</a><span aria-hidden="true">/</span><span>Checkout</span></nav>
+        <div class="shop-heading"><p class="section-overline">COMPRA COMO VISITANTE</p><h1>Seu momento de <em>brilhar.</em></h1><p>Complete as etapas para visualizar como seria sua compra.</p></div>
+        <div class="shop-notice"><span aria-hidden="true">✳</span><p><strong>Simulação.</strong> Nenhum pedido será enviado, nenhum pagamento será processado e os dados informados não serão armazenados.</p></div>
+
+        <div class="cart-empty" id="checkout-empty" hidden><span aria-hidden="true">✧</span><h2>Não há peças no carrinho.</h2><p>Escolha uma peça de demonstração para experimentar o checkout.</p><a class="button button-dark" href="catalogo.html">Explorar coleção <span aria-hidden="true">↗</span></a></div>
+
+        <div id="checkout-flow" hidden>
+          <ol class="checkout-progress" aria-label="Etapas da compra"><li data-progress="1"><span>01</span> Identificação</li><li data-progress="2"><span>02</span> Endereço</li><li data-progress="3"><span>03</span> Entrega e pagamento</li><li data-progress="4"><span>04</span> Revisão</li></ol>
+          <div class="checkout-layout">
+            <div class="checkout-main">
+              <form class="checkout-step" id="contact-form" data-step="1">
+                <div class="step-heading"><p class="section-overline">ETAPA 01 / 04</p><h2>Como podemos <em>chamar você?</em></h2><p>Esses dados aparecem apenas na revisão desta simulação.</p></div>
+                <div class="field-grid"><label class="field field-full">Nome completo<input name="name" type="text" autocomplete="name" required minlength="3" placeholder="Seu nome completo" /></label><label class="field">E-mail<input name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com" /></label><label class="field">Celular<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required minlength="10" placeholder="(00) 00000-0000" /></label></div>
+                <div class="step-actions"><a class="subtle-link" href="carrinho.html">← Voltar ao carrinho</a><button class="button button-dark" type="submit">Continuar <span aria-hidden="true">↗</span></button></div>
+              </form>
+
+              <form class="checkout-step" id="address-form" data-step="2" hidden>
+                <div class="step-heading"><p class="section-overline">ETAPA 02 / 04</p><h2>Onde seria a <em>entrega?</em></h2><p>Preencha o endereço manualmente. Nenhum dado será consultado ou enviado.</p></div>
+                <div class="field-grid"><label class="field">CEP<input name="postalCode" type="text" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{5}-?[0-9]{3}" title="Digite 8 números, com ou sem hífen" placeholder="00000-000" /></label><label class="field field-spacer" aria-hidden="true"></label><label class="field field-wide">Rua ou avenida<input name="street" type="text" autocomplete="address-line1" required placeholder="Nome da rua" /></label><label class="field">Número<input name="number" type="text" inputmode="numeric" required placeholder="123" /></label><label class="field">Complemento <span class="optional">opcional</span><input name="complement" type="text" autocomplete="address-line2" placeholder="Apartamento, casa..." /></label><label class="field">Bairro<input name="district" type="text" required placeholder="Seu bairro" /></label><label class="field">Cidade<input name="city" type="text" autocomplete="address-level2" required placeholder="Sua cidade" /></label><label class="field">Estado<select name="state" autocomplete="address-level1" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label></div>
+                <div class="step-actions"><button class="subtle-link" type="button" data-back="1">← Voltar</button><button class="button button-dark" type="submit">Continuar <span aria-hidden="true">↗</span></button></div>
+              </form>
+
+              <form class="checkout-step" id="delivery-form" data-step="3" hidden>
+                <div class="step-heading"><p class="section-overline">ETAPA 03 / 04</p><h2>Entrega e <em>pagamento.</em></h2><p>Escolha opções simuladas para visualizar o total.</p></div>
+                <fieldset class="choice-fieldset"><legend>Entrega</legend><label class="choice-card"><input type="radio" name="shipping" value="standard" required checked /><span><strong>Entrega padrão</strong><small>Opção ilustrativa, sem prazo real</small></span><b>R$ 14,90</b></label><label class="choice-card"><input type="radio" name="shipping" value="express" /><span><strong>Entrega expressa</strong><small>Opção ilustrativa, sem prazo real</small></span><b>R$ 29,90</b></label></fieldset>
+                <fieldset class="choice-fieldset payment-choices"><legend>Forma de pagamento</legend><label class="choice-card"><input type="radio" name="payment" value="pix" required checked /><span><strong>Pix</strong><small>Sem geração de QR Code ou cobrança</small></span></label><label class="choice-card"><input type="radio" name="payment" value="card" /><span><strong>Cartão</strong><small>Nenhum dado do cartão será solicitado</small></span></label><label class="choice-card"><input type="radio" name="payment" value="boleto" /><span><strong>Boleto</strong><small>Sem emissão de boleto</small></span></label></fieldset>
+                <div class="step-actions"><button class="subtle-link" type="button" data-back="2">← Voltar</button><button class="button button-dark" type="submit">Revisar pedido <span aria-hidden="true">↗</span></button></div>
+              </form>
+
+              <section class="checkout-step" id="review-step" data-step="4" hidden aria-labelledby="review-title">
+                <div class="step-heading"><p class="section-overline">ETAPA 04 / 04</p><h2 id="review-title">Confira os <em>detalhes.</em></h2><p>Esta revisão encerra apenas uma simulação de compra.</p></div>
+                <div class="review-block"><div><h3>Identificação</h3><button type="button" data-edit="1">Editar</button></div><p id="review-contact"></p></div>
+                <div class="review-block"><div><h3>Endereço de envio</h3><button type="button" data-edit="2">Editar</button></div><p id="review-address"></p></div>
+                <div class="review-block"><div><h3>Entrega e pagamento</h3><button type="button" data-edit="3">Editar</button></div><p id="review-methods"></p></div>
+                <p class="review-warning">Ao continuar, você verá uma confirmação fictícia. Nenhum pedido será recebido pela Bê Store e não haverá cobrança.</p>
+                <div class="step-actions"><button class="subtle-link" type="button" data-back="3">← Voltar</button><button class="button button-dark" type="button" id="complete-demo">Concluir simulação <span aria-hidden="true">✓</span></button></div>
+              </section>
+            </div>
+            <aside class="order-summary checkout-summary" aria-labelledby="checkout-summary-title"><h2 id="checkout-summary-title">Resumo do pedido</h2><div id="checkout-summary-items"></div><div class="summary-row"><span>Subtotal</span><strong id="checkout-subtotal"></strong></div><div class="summary-row"><span>Entrega</span><strong id="checkout-shipping"></strong></div><div class="summary-total"><span>Total ilustrativo</span><strong id="checkout-total"></strong></div><p>Nenhuma compra ou cobrança será realizada.</p></aside>
+          </div>
+        </div>
+
+        <div class="checkout-complete" id="checkout-complete" hidden><span class="complete-icon" aria-hidden="true">✧</span><p class="section-overline">SIMULAÇÃO CONCLUÍDA</p><h2>Seu brilho está <em>no caminho.</em></h2><p>Você concluiu o fluxo de demonstração <strong id="demo-order-code"></strong>. Nenhum pedido real foi criado e nenhum pagamento foi feito.</p><div class="complete-actions"><a class="button button-dark" href="catalogo.html">Voltar à coleção <span aria-hidden="true">↗</span></a><a class="underlined-link" href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Ver peças reais no Instagram <span aria-hidden="true">↗</span></a></div></div>
+      </div>
+    </main>
+
+    <footer class="footer"><div class="container footer-main"><div><a class="footer-wordmark" href="index.html">BÊ STORE<span aria-hidden="true">✳</span></a><p>Semijoias para acompanhar sua essência.</p></div><div class="footer-links"><span>EXPLORE</span><a href="catalogo.html">Coleção</a><a href="index.html#essencia">Nossa essência</a><a href="index.html#contato">Contato</a></div><div class="footer-links"><span>ACOMPANHE</span><a href="https://www.instagram.com/_usebestore/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Bê Store. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo ↑</a></div></footer>
+
+    <script src="products.js" defer></script>
+    <script src="store.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="checkout.js" defer></script>
+  </body>
+</html>
